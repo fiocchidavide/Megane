@@ -7,3 +7,6 @@ app/.build/
 
 # macOS
 .DS_Store
+
+# Release builds
+dist/
