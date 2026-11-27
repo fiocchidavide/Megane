@@ -53,13 +53,29 @@ upscaled 2×; larger ones play at their own size.
 
 ## Install
 
-Needs an Apple Silicon Mac with macOS 15 or later, and [Homebrew](https://brew.sh).
-
 > [!NOTE]
 > Tested only on an M5 Pro with macOS 27. It should run on any Apple Silicon Mac; on older
 > chips the Efficient mode should still keep up, while Exact Anime4K may drop frames. Reports
 > from other Macs are welcome: please [open an issue](https://github.com/fiocchidavide/Megane/issues)
 > with your chip, macOS version and what the info panel (`i`) shows.
+
+### Download
+
+Needs an Apple Silicon Mac with macOS 27.2 or later.
+
+1. Download `Megane-<version>.zip` from the [latest release](https://github.com/fiocchidavide/Megane/releases/latest),
+   unzip it and move `Megane.app` to Applications.
+2. Open it. The app isn't notarised (that needs a paid Apple developer account), so macOS
+   refuses the first time: click Done, then go to System Settings ▸ Privacy & Security and
+   click **Open Anyway** next to the message about Megane. macOS remembers the choice.
+
+The download carries its own copy of mpv, FFmpeg and libass; their licenses and sources are
+listed in `Megane.app/Contents/Resources/ThirdParty`.
+
+### Build from source
+
+Works on macOS 15 or later and needs [Homebrew](https://brew.sh) and the Xcode Command Line
+Tools (`xcode-select --install`).
 
 ```bash
 brew install mpv            # brings libass and FFmpeg
@@ -68,9 +84,10 @@ cd Megane
 scripts/install_app.sh      # builds and installs /Applications/Megane.app
 ```
 
-The script needs the Xcode Command Line Tools (`xcode-select --install`). With full Xcode
-installed, it also compiles the app icon. The app links Homebrew's mpv, so keep it
-installed.
+With full Xcode installed, the script also compiles the app icon. The app links Homebrew's
+mpv, so keep it installed. To update, `git pull` and run `scripts/install_app.sh` again;
+settings and key bindings are kept. `scripts/package_app.sh` builds the downloadable,
+self-contained app instead.
 
 To run it without installing:
 
