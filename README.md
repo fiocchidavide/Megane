@@ -13,7 +13,7 @@ Japanese for glasses, and it has the ANE inside.
 
 **The same look as Anime4K for about 6% of the power: 1.1 W instead of 19.8 W.**
 
-Anime4K usually runs as GLSL shaders inside mpv or IINA, which keeps the GPU busy and the
+Anime4K usually runs as GLSL shaders inside [mpv](https://mpv.io) or [IINA](https://iina.io), which keeps the GPU busy and the
 fans spinning. Megane is built on libmpv, so it plays what mpv plays, but it takes each
 decoded frame at source resolution, upscales it 2× on the Neural Engine, composes it on the
 GPU and draws subtitles on top at display resolution.
@@ -121,6 +121,15 @@ design/                  app icon (Icon Composer) and the control bar's glasses
 docs/                    README screenshots (CC BY-SA 4.0, see above)
 scripts/install_app.sh   build and install Megane.app
 ```
+
+## Acknowledgments
+
+- [Anime4K](https://github.com/bloc97/Anime4K) by bloc97: the upscaling networks and their weights.
+- [mpv](https://mpv.io): decoding, playback and input, through libmpv.
+- [libass](https://github.com/libass/libass) and [FFmpeg](https://ffmpeg.org): subtitle rendering and reading.
+- [IINA](https://iina.io): the Mac mpv player Megane takes as its reference. Megane matches its
+  colours, and ideas such as the buffering indicator come from it.
+- The [Morevna Project](https://morevnaproject.org): the animation in the screenshots.
 
 ## License
 
