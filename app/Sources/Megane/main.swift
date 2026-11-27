@@ -16,6 +16,15 @@ func bundledModel(_ name: String) -> URL {
             .appendingPathComponent("Models/\(name).mlpackage")
 }
 
+// HTTPS through FFmpeg: it verifies certificates with OpenSSL, whose built-in CA path points
+// into Homebrew. The downloadable app bundles that OpenSSL, so on a Mac without Homebrew
+// every https:// read through FFmpeg failed verification: mpv falls back to the system's curl
+// for the video, but the subtitle reader (Subtitles, FFmpeg) has no fallback. macOS ships the
+// same roots as a PEM file; use it unless the user set their own (setenv's 0: don't overwrite).
+if FileManager.default.fileExists(atPath: "/etc/ssl/cert.pem") {
+    setenv("SSL_CERT_FILE", "/etc/ssl/cert.pem", 0)
+}
+
 let models: [Preferences.Quality: URL] = [.efficient: bundledModel("Student_M"), .exact: bundledModel("Anime4K_A")]
 
 var args = Array(CommandLine.arguments.dropFirst())
