@@ -1,0 +1,67 @@
+Megane
+Copyright (C) 2026 Davide Fiocchi
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program (see LICENSE). If not, see <https://www.gnu.org/licenses/>.
+
+
+Additional term under section 7(b) of the GNU GPL version 3
+-----------------------------------------------------------
+
+Any conveyed copy of this program, modified or not, and any work based on it,
+must preserve the following author attribution:
+
+    Based on Megane by Davide Fiocchi (https://github.com/fiocchidavide/Megane)
+
+The attribution must appear in the program's "About" window, or, if the work
+has no such window, in an equivalent place where users see credits (such as
+the output of a --version or --help option), and in the documentation
+accompanying the work. A work that has been substantially modified may change
+the wording to "Based on" or "Derived from", but must keep the author's name
+and the link.
+
+
+Third-party components
+----------------------
+
+Megane builds on Anime4K (https://github.com/bloc97/Anime4K). The model
+app/Models/Anime4K_A.mlpackage is Anime4K's Mode A network rewritten for the
+Apple Neural Engine; its weights are Anime4K's own and remain under Anime4K's
+MIT License. The model app/Models/Student_M.mlpackage is a smaller network
+trained by Megane to reproduce Anime4K Mode A; it is part of Megane and is
+licensed like the rest of this program.
+
+Anime4K's license:
+
+    Copyright (c) 2019-2021 bloc97
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to permit
+    persons to whom the Software is furnished to do so, subject to the
+    following conditions:
+
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+    NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+    DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+    OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+    USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The player links against libmpv (GPL-2.0-or-later / LGPL-2.1-or-later),
+FFmpeg and libass, each under its own license.

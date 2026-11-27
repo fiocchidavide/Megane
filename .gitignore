@@ -1,0 +1,9 @@
+# Swift
+app/.build/
+.swiftpm/
+
+# Compiled Core ML (regenerated from .mlpackage at load time)
+*.mlmodelc/
+
+# macOS
+.DS_Store
