@@ -55,6 +55,12 @@ upscaled 2×; larger ones play at their own size.
 
 Needs an Apple Silicon Mac with macOS 15 or later, and [Homebrew](https://brew.sh).
 
+> [!NOTE]
+> Tested only on an M5 Pro with macOS 27. It should run on any Apple Silicon Mac; on older
+> chips the Efficient mode should still keep up, while Exact Anime4K may drop frames. Reports
+> from other Macs are welcome: please [open an issue](https://github.com/fiocchidavide/Megane/issues)
+> with your chip, macOS version and what the info panel (`i`) shows.
+
 ```bash
 brew install mpv            # brings libass and FFmpeg
 git clone https://github.com/fiocchidavide/Megane.git
